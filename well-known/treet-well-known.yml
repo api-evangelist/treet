@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of the /.well-known/ discovery surface on the Treet website
+description: >-
+  Results of probing the /.well-known/ discovery surface for the Treet website
+  host (https://www.treet.co). Treet is a branded-recommerce SaaS that consumes
+  the Shopify (and other commerce/logistics) APIs rather than publishing its own
+  developer API, so it exposes no OpenID/OAuth discovery, API catalog, or AI
+  plugin manifest. Status is the HTTP code observed at fetch time; no document
+  returned a real payload, so nothing was saved verbatim.
+hosts:
+  - host: https://www.treet.co
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /robots.txt
+        status: 200
+        note: Present (standard robots file), not a /.well-known/ discovery document.
